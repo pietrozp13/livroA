@@ -5,21 +5,25 @@ import { Animated, Easing } from 'react-native';
 import Anim from './anim'
 import Screen1 from './screens/screen1'
 import Screen2 from './screens/screen2'
+import Menu from './screens/menu'
 import { createStackNavigator } from 'react-navigation';
 import { fromBottom } from 'react-navigation-transitions';
 import { createAppContainer } from 'react-navigation';
 
 const navigator = createStackNavigator(
   {
-  Screen1: { 
-    screen: Screen1 
-  },
-  Screen2: { 
-    screen: Anim 
-  }, 
+    Menu: { 
+      screen: Menu 
+    },
+    Screen1: { 
+      screen: Screen1 
+    },
+    Screen2: { 
+      screen: Screen2 
+    }, 
 },
 {
-  initialRouteName: 'Screen1',
+  initialRouteName: 'Menu',
   transitionConfig: () => fromBottom(1500),
   headerMode: 'none'
 },
