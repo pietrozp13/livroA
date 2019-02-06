@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Button, View, TouchableWithoutFeedback } from 'react-native';
+import { StyleSheet, Button, View } from 'react-native';
 import LottieView from 'lottie-react-native';
 import { Animated } from 'react-native';
 
