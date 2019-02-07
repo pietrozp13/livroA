@@ -7,7 +7,7 @@ import Screen1 from './screens/screen1'
 import Screen2 from './screens/screen2'
 import Menu from './screens/menu'
 import { createStackNavigator } from 'react-navigation';
-import { fromBottom } from 'react-navigation-transitions';
+import { fromBottom, fromLeft, fromRight } from 'react-navigation-transitions';
 import { createAppContainer } from 'react-navigation';
 
 const navigator = createStackNavigator(
@@ -24,8 +24,9 @@ const navigator = createStackNavigator(
 },
 {
   initialRouteName: 'Menu',
-  transitionConfig: () => fromBottom(1500),
-  headerMode: 'none'
+  transitionConfig: () => fromRight(1500),
+  headerMode: 'none',
+  mode: 'modal'
 },
 );
 

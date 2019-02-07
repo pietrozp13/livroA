@@ -14,9 +14,7 @@ class Screen1 extends React.Component {
     render() {
       const { navigate } = this.props.navigation;
       return(
-        <View
-          style={styles.container}
-        >
+        <View style={styles.container}>
             <View style={styles.btnMenu}>
                 <Button
                     onPress={()=> navigate('Menu')}
@@ -26,7 +24,7 @@ class Screen1 extends React.Component {
             </View>
             <View style={styles.btnBack}>
                 <Button
-                    onPress={()=> navigate('Screen2')}
+                    onPress={()=> navigate('Menu')}
                     title="<--"
                     color="#841584"
                 />
@@ -53,7 +51,7 @@ class Screen1 extends React.Component {
             <View style={styles.btnNext}>
                 <Button
                     onPress={()=> navigate('Screen2')}
-                    title="-->"
+                    title="->" 
                     color="#841584"
                 />
           </View>
@@ -65,39 +63,40 @@ class Screen1 extends React.Component {
   const styles = StyleSheet.create({
     container: {
       flex: 1,
-      transform: [{ rotate: '90deg'}],
-      backgroundColor: '#fff',
+      width: "100%",
+      height: "100%",
+      backgroundColor: '#d1d1d1',
       alignItems: 'center',
       justifyContent: 'center',
     },
     playAnim: {
       zIndex: 999,
       top: -100,
-      left: -150,
+      left: 200,
       height: 100,
       width: 100,
-      backgroundColor:'#42f46e'
+      backgroundColor:'#42f46e',
     },
     reset:{
       zIndex: 999,
       top: -200,
-      left: 150,
+      left: -200,
       height: 100,
       width: 100,
       backgroundColor:'#e83333'
     },
     btnMenu:{
       zIndex: 999,
+      left: -330,
       top: 50,
-      left: -320,
       height: 100,
       width: 100,
       backgroundColor:'blue'
     },
     btnBack:{
       zIndex: 999,
+      left: -330,
       top: 100,
-      left: -320,
       height: 100,
       width: 100,
       backgroundColor:'#e83333'
@@ -105,7 +104,7 @@ class Screen1 extends React.Component {
     btnNext: {
       zIndex: 999,
       top: -200,
-      left: 320,
+      right: -330,
       height: 100,
       width: 100,
       backgroundColor:'green'

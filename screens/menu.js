@@ -23,7 +23,6 @@ class Screen1 extends React.Component {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        transform: [{ rotate: '90deg'}],
         backgroundColor: 'blue',
         alignItems: 'center',
         justifyContent: 'center',
